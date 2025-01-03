@@ -16,6 +16,8 @@ function ssource --description "source most of my dotfiles, useful if making cha
     source ~/.config/fish/functions.fish
     source ~/.config/fish/chromium.fish
 
+    source ~/.config/fish/utono/aliases.fish
+
     # for things not checked into git..
     if test -e "$HOME/.extra.fish";
         source ~/.extra.fish
@@ -103,3 +105,6 @@ end
 # TODO debug this
 # this currently messes with newlines in my prompt. lets debug it later.
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
+zoxide init fish | source
+

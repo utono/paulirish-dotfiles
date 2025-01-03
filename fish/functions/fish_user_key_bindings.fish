@@ -1,9 +1,11 @@
+# fish_user_key_bindings.fish
+# I love the FZF keybindings, especially ctrl-t midway through typing a command
 
-# I love the FZF keybindings, especially ctrl-t midway through typing  a command
+# Set the path to the FZF key bindings file
+set -l fzfb_path "/usr/share/fish/vendor_functions.d/fzf_key_bindings.fish"
 
-# orig source is ~ https://github.com/junegunn/fzf/blob/master/shell/key-bindings.fish
-set -l fzfb_path "$(brew --prefix)/opt/fzf/shell/key-bindings.fish"
-if test -e $fzfb_path
-	source $fzfb_path
-	fzf_key_bindings
+# Check if the file exists and source it
+if test -f $fzfb_path
+    source $fzfb_path
+    fzf_key_bindings
 end
